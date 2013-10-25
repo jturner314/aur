@@ -20,11 +20,11 @@ source=(http://github.com/martin-ueding/$pkgname/archive/v$pkgver.tar.gz)
 sha256sums=('SKIP') # TODO: generate with 'makepkg -g'
 
 build() {
-    cd "$srcdir/$pkgname-v$pkgver"
+    cd "$srcdir/$pkgname-$pkgver"
     make
 }
 
 package() {
-    cd "$srcdir/$pkgname-v$pkgver"
+    cd "$srcdir/$pkgname-$pkgver"
     make DESTDIR="$pkgdir/" install
 }
