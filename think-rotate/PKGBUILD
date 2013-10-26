@@ -2,7 +2,7 @@
 
 pkgname=think-rotate
 pkgver=2.10beta
-pkgrel=2
+pkgrel=3
 pkgdesc="Scripts for ThinkPad X220 Tablet rotation, docking, etc."
 arch=('any')
 url="http://martin-ueding.de/en/projects/think-rotate"
