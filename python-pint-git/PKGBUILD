@@ -1,0 +1,34 @@
+# Maintainer: Jim Turner <jturner314 @t gmail dot com>
+
+pkgbase=python-pint-git
+pkgname=(python-pint-git python2-pint-git)
+pkgver=0.4.1.r1.gec5a208
+pkgrel=1
+pkgdesc="A package to define and manipulate physical quantities (numbers with units)"
+url="http://pint.readthedocs.org/"
+license=("BSD")
+arch=('any')
+makedepends=('python' 'python-setuptools' 'python2' 'python2-setuptools')
+source=("$pkgbase::git+https://github.com/hgrecco/pint.git")
+md5sums=('SKIP')
+
+pkgver() {
+  cd "$srcdir/$pkgbase"
+  git describe --long | sed -E 's/([^-]*-g)/r\1/;s/-/./g'
+}
+
+package_python-pint-git() {
+  depends=('python')
+
+  cd "$srcdir/$pkgbase"
+  python setup.py install --root="$pkgdir"
+  install -D -m0644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
+
+package_python2-pint-git() {
+  depends=('python2')
+
+  cd "$srcdir/$pkgbase"
+  python2 setup.py install --root="$pkgdir"
+  install -D -m0644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
