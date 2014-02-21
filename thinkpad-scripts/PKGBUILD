@@ -1,7 +1,6 @@
 # Maintainer: Jim Turner <jturner314 @t gmail dot com>
 
-pkgname=think-rotate
-_newpkgname=thinkpad-scripts
+pkgname=thinkpad-scripts
 pkgver=3.3
 pkgrel=1
 pkgdesc="Scripts for ThinkPad X220 & X230 Tablet rotation, docking, etc."
@@ -17,17 +16,17 @@ optdepends=('glib2: for rotating subpixel anti-aliasing'
             'networkmanager: for managing connections when docking'
             'qt4: for showing dialog boxes'
             'xorg-xbacklight: for backlight control when docking')
-conflicts=('thinkpad-scripts')
+conflicts=('think-rotate')
 install="$pkgname.install"
-source=("http://github.com/martin-ueding/$_newpkgname/archive/v$pkgver.tar.gz")
+source=("http://github.com/martin-ueding/$pkgname/archive/v$pkgver.tar.gz")
 sha256sums=('0dfd822491dd2319b4c7f8e32d3e4ed2ba6e9ade911ea9c3d9b7c0e79bf704da')
 
 build() {
-    cd "$srcdir/$_newpkgname-$pkgver"
+    cd "$srcdir/$pkgname-$pkgver"
     make
 }
 
 package() {
-    cd "$srcdir/$_newpkgname-$pkgver"
+    cd "$srcdir/$pkgname-$pkgver"
     make DESTDIR="$pkgdir/" install
 }
