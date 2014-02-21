@@ -9,7 +9,7 @@ Pint is Python package to define, operate and manipulate physical quantities:
 the product of a numerical value and a unit of measurement. It allows arithmetic
 operations between them and conversions from and to different
 units. (Description copied from the project website
-[here](http://pint.readthedocs.org/en/latest/)).
+[here](http://pint.readthedocs.org/en/latest/).)
 
 ## [thinkpad-scripts](https://aur.archlinux.org/packages/thinkpad-scripts)
 
