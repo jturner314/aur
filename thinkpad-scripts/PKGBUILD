@@ -17,7 +17,7 @@ optdepends=('glib2: for rotating subpixel anti-aliasing'
             'xorg-xbacklight: for backlight control when docking')
 conflicts=('think-rotate')
 install="$pkgname.install"
-source=("http://github.com/martin-ueding/$pkgname/archive/v$pkgver.tar.gz")
+source=("https://github.com/martin-ueding/$pkgname/archive/v$pkgver.tar.gz")
 sha256sums=('1b36ec0e017cf58492444fb6e2e70c5d6cc2888252f58901875843994569ab23')
 
 build() {
