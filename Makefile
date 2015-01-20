@@ -15,3 +15,5 @@ test:
 
 clean:
 	git clean -fxd
+	rm -rf python-pint-git/src
+	rm -rf python2-pint-git/src
